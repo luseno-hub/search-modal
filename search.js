@@ -1,19 +1,23 @@
-$('a[href="#search"]').click(function () {
-  event.preventDefault();
-  $("#search-box").addClass("-open");
+const searchTrigger = document.getElementById("search"),
+  searchModal = document.querySelector("#search-box"),
+  closeSearch = document.querySelector("#close");
+
+searchTrigger.addEventListener("click", function (e) {
+  e.preventDefault();
+  searchModal.classList.add("-open");
   setTimeout(function () {
     inputSearch.focus();
-  }, 800);
+  }, 500);
 });
 
-$('a[href="#close"]').click(function () {
-  event.preventDefault();
-  $("#search-box").removeClass("-open");
+closeSearch.addEventListener("click", function (e) {
+  e.preventDefault();
+  searchModal.classList.remove("-open");
 });
 
-$(document).keyup(function (e) {
-  if (e.keyCode == 27) {
+document.addEventListener("keyup", function (e) {
+  if (e.keycode === 27) {
     // escape key maps to keycode `27`
-    $("#search-box").removeClass("-open");
+    searchModal.classList.remove("-open");
   }
 });
