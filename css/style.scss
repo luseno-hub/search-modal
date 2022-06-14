@@ -24,8 +24,8 @@
     .close:hover {
       opacity: 1;
     }
-    .close:before,
-    .close:after {
+    .close::before,
+    .close::after {
       position: absolute;
       left: 15px;
       content: " ";
@@ -33,10 +33,10 @@
       width: 2px;
       background-color: white;
     }
-    .close:before {
+    .close::before {
       transform: rotate(45deg);
     }
-    .close:after {
+    .close::after {
       transform: rotate(-45deg);
     }
     .search-main {
@@ -55,9 +55,9 @@
         background: transparent;
         border: none;
         box-shadow: none;
-        padding: 12px 74px 12px 0;
-        font-size: 72px;
-        height: 84px;
+        padding: 0.5rem 2.5rem 0.5rem 0;
+        font-size: 2rem;
+        height: 3rem;
         border-bottom: 2px solid white;
         display: block;
         color: white;
@@ -69,20 +69,14 @@
         &:focus {
           outline: none;
         }
+
+        @media (min-width: 768px) {
+          font-size: 4rem;
+          padding: 0.75rem 4.5rem 0.75rem 0;
+          height: 5rem;
+        }
       }
 
-      button {
-        border: 0;
-        left: auto;
-        outline: none;
-        padding: 0;
-        position: absolute;
-        right: 0;
-        top: 0.3em;
-        bottom: 0.3em;
-        background: transparent;
-        font-size: 43px;
-      }
       .search-info {
         display: block;
         color: white;
