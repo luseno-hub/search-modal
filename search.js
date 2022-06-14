@@ -5,6 +5,8 @@ const searchTrigger = document.getElementById("search"),
 searchTrigger.addEventListener("click", function (e) {
   e.preventDefault();
   searchModal.classList.add("-open");
+  e.setAttribute("aria-expanded", "true");
+  body.classList.toggle("noscroll");
   setTimeout(function () {
     inputSearch.focus();
   }, 500);
@@ -12,6 +14,7 @@ searchTrigger.addEventListener("click", function (e) {
 
 closeSearch.addEventListener("click", function (e) {
   e.preventDefault();
+  e.setAttribute("aria-expanded", "false");
   searchModal.classList.remove("-open");
 });
 
