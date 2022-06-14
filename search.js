@@ -17,7 +17,7 @@ closeSearch.addEventListener("click", function (e) {
 
 document.addEventListener("keyup", function (e) {
   if (e.keycode === 27) {
-    // escape key maps to keycode `27`
+    // map escape key => keycode `27`
     searchModal.classList.remove("-open");
   }
 });
