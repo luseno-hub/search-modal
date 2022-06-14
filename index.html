@@ -9,23 +9,36 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <a id="search" href="#search">search</a>
-    <div id="search-box" class="search modal">
-      <div class="container">
-        <a id="close" class="close" href="#close"></a>
-        <div class="search-main">
-          <div class="search-inner">
-            <input
-              type="text"
-              id="inputSearch"
-              name="firstname"
-              placeholder=""
-            />
-            <span class="search-info">Hit enter to search or ESC to close</span>
+    <a id="search" href="">search</a>
+    <form action="" role="search" aria-label="Sitewide">
+      <div id="search-box" class="search modal">
+        <div class="container">
+          <a
+            id="close"
+            class="close"
+            href="#close"
+            aria-label="close"
+            role="button"
+          ></a>
+          <div class="search-main">
+            <div class="search-inner">
+              <input
+                type="text"
+                id="inputSearch"
+                name="search-ntv"
+                placeholder="Search..."
+                spellcheck="false"
+                role="searchbox"
+                aria-label="search query"
+              />
+              <span class="search-info"
+                >Hit enter to search or ESC to close</span
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
     <script src="./search.js"></script>
   </body>
 </html>
