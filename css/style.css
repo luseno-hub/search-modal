@@ -64,6 +64,8 @@
 }
 
 #search-box .container .search-main input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: transparent;
   border: none;
   -webkit-box-shadow: none;
